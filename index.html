@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>App Foot</title>
+	<link rel="stylesheet" type="text/css" href="stylesheetapp.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+	<header>
+
+		<div class="image">
+			<img src="img_2/nlogova.png" alt=""  width="60%" >
+		</div>
+
+	</header>
+	<script type="text/javascript">
+	var score = new Object();
+	score.teamOne = 0;
+	score.teamTwo = 0;
+	score.teamThree = 0;
+	score.teamFour = 0;
+	score.teamFive = 0;
+	score.teamSix = 0;
+
+	localStorage["team"] = JSON.stringify(team);
+	localStorage["score"] = JSON.stringify(score);
+
+	var team = JSON.parse(localStorage["team"]);
+	var score = JSON.parse(localStorage["score"]);
+
+	document.getElementById('teamOne').value = team[1].nameTeam;
+	</script>
+	<div class="test">
+		<div id="team">
+			<h1><em>Nom des équipes</em></h1>
+			<!-- les <input...>, c'est pour le javascript ca correspond aux zones de texte pour mettre les noms d'équipe et des joueurs -->
+			<div id="nameTeam">
+				<!-- <h3>Nom des équipes :</h3> -->
+				<input type="text" id="teamOne">
+				<input type="text" id="teamTwo">
+				<input type="text" id="teamThree">
+				<input type="text" id="teamFour">
+				<input type="text" id="teamFive">
+				<input type="text" id="teamSix">
+			</div>
+
+			<div class="titre">
+				<h2><em>Nom des joueurs</em></h2>
+			</div>
+
+			<div class="team-1" id="listOne">
+				<input type="text" id="teamOnePlayerOne">
+				<input type="text" id="teamOnePlayerTwo">
+				<input type="text" id="teamOnePlayerThree">
+				<input type="text" id="teamOnePlayerFour">
+				<input type="text" id="teamOnePlayerFive">
+			</div>
+			<div class="team-2" id="listTwo">
+				<input type="text" id="teamTwoPlayerOne">
+				<input type="text" id="teamTwoPlayerTwo">
+				<input type="text" id="teamTwoPlayerThree">
+				<input type="text" id="teamTwoPlayerFour">
+				<input type="text" id="teamTwoPlayerFive">
+			</div>
+			<div class="team-3" id="listThree">
+				<input type="text" id="teamThreePlayerOne">
+				<input type="text" id="teamThreePlayerTwo">
+				<input type="text" id="teamThreePlayerThree">
+				<input type="text" id="teamThreePlayerFour">
+				<input type="text" id="teamThreePlayerFive">
+			</div>
+			<div class="team-4"  id="listFour">
+				<input type="text" id="teamFourPlayerOne">
+				<input type="text" id="teamFourPlayerTwo">
+				<input type="text" id="teamFourPlayerThree">
+				<input type="text" id="teamFourPlayerFour">
+				<input type="text" id="teamFourPlayerFive">
+			</div>
+			<div class="team-5"  id="listFive">
+				<input type="text" id="teamFivePlayerOne">
+				<input type="text" id="teamFivePlayerTwo">
+				<input type="text" id="teamFivePlayerThree">
+				<input type="text" id="teamFivePlayerFour">
+				<input type="text" id="teamFivePlayerFive">
+			</div>
+			<div class="team-6"  id="listSix">
+				<input type="text" id="teamSixPlayerOne">
+				<input type="text" id="teamSixPlayerTwo">
+				<input type="text" id="teamSixPlayerThree">
+				<input type="text" id="teamSixPlayerFour">
+				<input type="text" id="teamSixPlayerFive">
+			</div>
+		</div>
+	</div>
+	<div id="match">
+		<table>
+
+			<thead>
+				<tr>
+					<th class="terrain">Terrain</th>
+					<th>Equipe</th>
+					<th class="but">But</th>
+					<th>Gagnant</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td colspan="4"><h1>Premier Match</h1></td>
+				</tr>
+				<tr>
+
+					<td><img src="img_2/rouge.png" alt=""  width="20%"/></td>
+					<td id="m1t1vst2">EQUIPE-1 vs EQUIPE-2</td>
+					<td>
+						<label>POINT-EQUIPE-1 : </label><input type="number" id="matchOneTeamOne"><br>
+						<label>POINT-EQUIPE-2 : </label><input type="number" id="matchOneTeamTwo"></td>
+						<td id="t1vst2"></td>
+					</tr>
+					<tr>
+						<td><img src="img_2/bleu.png" alt=""  width="20%"/></td>
+						<td id="m1t3vst4">EQUIPE-3 vs EQUIPE-4</td>
+						<td>
+							<label>	POINT-EQUIPE-3 : </label><input type="number" id="matchOneTeamThree"><br>
+							<label>	POINT-EQUIPE-4 : </label><input type="number" id="matchOneTeamFour">
+						</td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td><img src="img_2/vert.png" alt=""  width="20%"/></td>
+						<td id="m1t5vst6">EQUIPE-5 vs EQUIPE-6</td>
+						<td>
+							<label>POINT-EQUIPE-5 : </label><input type="number" id="matchOneTeamFive"><br>
+							<label>POINT-EQUIPE-6 : </label><input type="number" id="matchOneTeamSix">
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan="4"><input type="submit" value="Valider" onclick="javascript:matchOne()"></td>
+					</tr>
+					<tr>
+						<td colspan="4"><h1>Deuxième Match</h1></td>
+					</tr>
+					<tr>
+						<td><img src="img_2/rouge.png" alt=""  width="20%"/></td>
+						<td id="m2t2vst3">EQUIPE-1 vs EQUIPE-3</td>
+						<td>
+							<label>POINT-EQUIPE-1 : </label><input type="number" id="matchTwoTeamTwo"><br>
+							<label>POINT-EQUIPE-3 : </label><input type="number" id="matchTwoTeamThree">
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="img_2/bleu.png" alt=""  width="20%"/></td>
+						<td id="m2t4vst5">EQUIPE-4 vs EQUIPE-5</td>
+						<td>
+							<label>POINT-EQUIPE-4 : </label><input type="number" id="matchTwoTeamFour"><br>
+							<label>POINT-EQUIPE-5 : </label><input type="number" id="matchTwoTeamFive">
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><img src="img_2/vert.png" alt=""  width="20%"/></td>
+						<td id="m2t6vst1">EQUIPE-6 vs EQUIPE-1</td>
+						<td><label>POINT-EQUIPE-6 : </label><input type="number" id="matchTwoTeamSix"><br>
+							<label>POINT-EQUIPE-1 : </label><input type="number" id="matchTwoTeamOne"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="4"><input type="submit" value="Valider" onclick="javascript:matchTwo()"></td>
+						</tr>
+						<tr>
+							<td colspan="4"><h1>Troisième Match</h1></td>
+						</tr>
+						<tr>
+							<td><img src="img_2/rouge.png" alt=""  width="20%"/></td>
+							<td id="m3t3vst5">EQUIPE-3 vs EQUIPE-5</td>
+							<td>
+								<label>POINT-EQUIPE-3 : </label><input type="number" id="matchThreeTeamThree"><br>
+								<label>POINT-EQUIPE-5 : </label><input type="number" id="matchThreeTeamFive">
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><img src="img_2/bleu.png" alt=""  width="20%"/></td>
+							<td id="m3t4vst1">EQUIPE-4 vs EQUIPE-1</td>
+							<td>
+								<label>POINT-EQUIPE-4 : </label><input type="number" id="matchThreeTeamFour"><br>
+								<label>POINT-EQUIPE-1 : </label><input type="number" id="matchThreeTeamOne"></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><img src="img_2/vert.png" alt=""  width="20%"/></td>
+								<td id="m3t6vst2">EQUIPE-6 vs EQUIPE-2</td>
+								<td>
+									<label>POINT-EQUIPE-6 : </label><input type="number" id="matchThreeTeamSix"><br>
+									<label>POINT-EQUIPE-2 : </label><input type="number" id="matchThreeTeamTwo">
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td colspan="4"><input type="submit" value="Valider" onclick="javascript:matchThree()"></td>
+							</tr>
+							<tr>
+								<td colspan="4"><h1>Quatrième Match</h1></td>
+							</tr>
+							<tr>
+								<td><img src="img_2/rouge.png" alt=""  width="20%"/></td>
+								<td id="m4t5vst2">EQUIPE-5 vs EQUIPE-2</td>
+								<td><label>POINT-EQUIPE-5 : </label><input type="number" id="matchFourTeamFive"><br>
+									<label>POINT-EQUIPE-2 : </label><input type="number" id="matchFourTeamTwo"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><img src="img_2/bleu.png" alt=""  width="20%"/></td>
+									<td id="m4t1vst3">EQUIPE-1 vs EQUIPE-3</td>
+									<td>
+										<label>POINT-EQUIPE-1 : </label><input type="number" id="matchFourTeamOne"><br>
+										<label>POINT-EQUIPE-3 : </label><input type="number" id="matchFourTeamThree">
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><img src="img_2/vert.png" alt=""  width="20%"/></td>
+									<td id="m4t6vst4">EQUIPE-6 vs EQUIPE-4</td>
+									<td>
+										<label>POINT-EQUIPE-6 : </label><input type="number" id="matchFourTeamSix"><br>
+										<label>POINT-EQUIPE-4 : </label><input type="number" id="matchFourTeamFour">
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td colspan="4"><input type="submit" value="Valider" onclick="javascript:matchFour()"></td>
+								</tr>
+								<tr>
+									<td colspan="4"><h1>Cinquième Match</h1></td>
+								</tr>
+								<tr>
+									<td><img src="img_2/rouge.png" alt=""  width="20%"/></td>
+									<td id="m5t5vst1">EQUIPE-5 vs EQUIPE-1</td>
+									<td>
+										<label>POINT-EQUIPE-5 : </label><input type="number" id="matchFiveTeamFive"><br>
+										<label>POINT-EQUIPE-1 : </label><input type="number" id="matchFiveTeamOne">
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><img src="img_2/bleu.png" alt=""  width="20%"/></td>
+									<td id="m5t3vst6">EQUIPE-3 vs EQUIPE-6</td>
+									<td>
+										<label>POINT-EQUIPE-3 : </label><input type="number" id="matchFiveTeamThree"><br>
+										<label>POINT-EQUIPE-6 : </label><input type="number" id="matchFiveTeamSix">
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><img src="img_2/vert.png" alt=""  width="20%"/></td>
+									<td id="m5t4vst2">EQUIPE-4 vs EQUIPE-2</td>
+									<td>
+										<label>POINT-EQUIPE-4 : </label><input type="number" id="matchFiveTeamFour"><br>
+										<label>POINT-EQUIPE-2 : </label><input type="number" id="matchFiveTeamTwo">
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td colspan="4"><input type="submit" value="Valider" onclick="javascript:matchFive()"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- div score pour le tableau qui affichera les scores finaux avec le comptage de point du cahier des charges -->
+					<div class="score">
+						<h2>Score Final</h2>
+						<table>
+							<thead>
+								<tr>
+									<th colspan="2">T1</th>
+									<th colspan="2">T2</th>
+									<th colspan="2">T3</th>
+									<th colspan="2">T4</th>
+									<th colspan="2">T5</th>
+									<th colspan="2">T6</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Score</td>
+										<td>But</td>
+										<td>Score</td>
+										<td>But</td>
+										<td>Score</td>
+										<td>But</td>
+										<td>Score</td>
+										<td>But</td>
+										<td>Score</td>
+										<td>But</td>
+										<td>Score</td>
+										<td>But</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+					</body>
+					</html>

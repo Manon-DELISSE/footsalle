@@ -1,0 +1,244 @@
+header {
+  width: 100%;
+}
+
+.image {
+  width: 35%;
+  margin-left: 550px;
+  margin-top: 50px;
+  display: block;
+}
+
+body {
+  background:url('img_2/nouveaufond2.png') fixed no-repeat;
+}
+
+input {
+  height: 30px;
+  margin-top: 1.5%;
+  margin-left: 1.5%;
+  font-size: 20%;
+}
+
+#team {
+  margin-top: 200px;
+  margin-left: 128px;
+}
+
+
+#team h1{
+  font-family: helvetica;
+  font-weight: lighter;
+}
+
+#team h1{
+  color: white;
+  /*margin-left:418px;*/
+
+}
+
+.titre {
+  height:50px;
+}
+
+.titre h2 {
+  font-family: helvetica;
+  font-weight: lighter;
+  color: white;
+  font-size: 32px;
+  margin-right:960px;
+}
+
+#nameTeam input {
+  background-color: rgba(254, 254, 254, 0.9);
+  height: 25px;
+  width:155px;
+  border-radius: 8px;
+  font-size:15px;
+  border-style: none;
+}
+
+#listOne input {
+  border-radius: 8px;
+  background-color: rgba(254, 254, 254, 0.7);
+  border-style: none;
+  font-size:15px;
+  height: 25px;
+  width:155px;
+  margin-right: -27px;
+}
+
+#listTwo input {
+  border-radius: 8px;
+  background-color: rgba(254, 254, 254, 0.7);
+  border-style: none;
+  height: 25px;
+  width:155px;
+  font-size:15px;
+  margin-right: -51px
+}
+
+#listThree input {
+  border-radius: 8px;
+  background-color: rgba(254, 254, 254, 0.7);
+  border-style: none;
+  height: 25px;
+  width:155px;
+  font-size:15px;
+  margin-right:-76px;
+}
+
+#listFour input {
+  border-radius: 8px;
+  background-color: rgba(254, 254, 254, 0.7);
+  border-style: none;
+  height: 25px;
+  width:155px;
+  font-size:15px;
+  margin-right: -102px;
+}
+
+#listFive input {
+  border-radius: 8px;
+  background-color: rgba(254, 254, 254, 0.7);
+  border-style: none;
+  height: 25px;
+  width:155px;
+  font-size:15px;
+  margin-right:-128px;
+}
+
+#listSix input {
+  border-radius: 8px;
+  background-color: rgba(254, 254, 254, 0.7);
+  border-style: none;
+  height: 25px;
+  width:155px;
+  font-size:15px;
+  margin-right:-150px;
+}
+
+[class^="team-"],
+[class*="team-"] {
+  display: inline-block;
+  width: 150px;
+}
+[class^="team-"] label,
+[class*="team-"] label {
+  margin: 5px auto;
+}
+
+[class^="team-"] input[type=text],
+[class*="team-"] input[type=text] {
+  width: 80px;
+  margin: 5px auto;
+  display: block;
+}
+
+#match input[type=submit] {
+	display: block;
+	margin: 10px auto;
+}
+
+/*.team input {
+border-radius: 8px;
+background-color: rgba(254, 254, 254, 0.7);
+border-style: none;
+font-size:15px;
+height: 25px;
+width:155px
+}*/
+
+#match{
+  margin-left:340px;
+  margin-top: 40px;
+  border-radius: 8px;
+  background-color: rgba(254, 254, 254, 0.8);
+  width: 50%;
+  height:70%;
+}
+
+#match h1 {
+  text-align: center;
+  color: rgba(45, 151, 45, 0.8);
+  font-family: helvetica;
+  font-weight: lighter;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+#match table {
+  margin-left:16px;
+  padding-top: 2%;
+  */*border: solid 3px black*/
+
+}
+
+.tbody tr td{
+}
+
+th {
+  font-size:30px;
+  font-family: helvetica;
+  font-weight: lighter;
+  border: solid 1px rgba(45, 151, 45, 0.8);
+  color: #0748AB;
+}
+
+.terrain {
+  font-size:30px;
+  font-family: helvetica;
+  font-weight: lighter;
+  border: solid 1px rgba(45, 151, 45, 0.8);
+  color: #0748AB;
+  width: 110px;
+}
+
+.but {
+  font-size:30px;
+  font-family: helvetica;
+  font-weight: lighter;
+  border: solid 1px rgba(45, 151, 45, 0.8);
+  color: #0748AB;
+  width:200px;
+
+}
+
+td {
+  /*padding: 10px;*/
+  font-size: 100%;
+  font-family: helvetica;
+  font-weight: lighter;
+  border: solid 1px rgba(45, 151, 45, 0.8);
+}
+
+#match input {
+  font-size: 15px;
+}
+
+
+label {
+  padding-left: 1%;
+}
+
+.score {
+  border-radius: 8px;
+  background-color: rgba(254, 254, 254, 0.8);
+  width: 100%;
+  height:600px;
+}
+
+.score table {
+  margin-top: 70px;
+  margin-left: 41%;
+}
+
+.score td {
+  height: 100px;
+}
+
+h2 {
+  font-size: 400%;
+  text-align: center;
+  color: rgba(45, 151, 45, 0.8)
+}
